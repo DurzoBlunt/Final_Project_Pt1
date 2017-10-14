@@ -23,7 +23,7 @@ public class MyEntry<K, V> {
         this.value = value;
     }
 
-    public String toMyString(){
+    public String toString(){
         return "Key = " + this.key + ", Value = " + this.value + " ";
     }
 }

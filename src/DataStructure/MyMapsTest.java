@@ -81,12 +81,14 @@ public class MyMapsTest {
     }
 
 //    @Test
-//    public String toTheString() throws Exception{
-//        accountsMap.put("oneaznboy", 10);
-//        accountsMap.put("Kev", 20);
-//        accountsMap.put("Harambe", 20);
-//        accountsMap.put("Dart", 20);
-//        System.out.println(toTheString());
-//        return null;
+//    public void toString() throws Exception{
+//       try{
+//           accountsMap.put("oneaznboy", 10);
+//           accountsMap.put("Kev", 20);
+//           accountsMap.put("Harambe", 20);
+//           accountsMap.put("Dart", 20);
+//       } catch (Exception e){
+//
+//        }
 //    }
 }

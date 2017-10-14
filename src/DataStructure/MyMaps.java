@@ -113,11 +113,11 @@ public class MyMaps<K, V> {
         return containsValue;
     }
 
-    public String toTheString(){
+    public String toString(){
         String string = "";
         for (int i = 0; i < size; i++){
                 //string.concat(values[i].toString())
-                 string += values[i].toMyString();
+                 string += values[i].toString();
 
         }
         return string;

@@ -44,14 +44,14 @@ public class AccountDB {
         for(User user:accountList) {
             if(user.getUsername().equalsIgnoreCase(other)) {
                 doesExist = true;
-                setCurrentUser(user); // Clones existing user if applicable.
+                setCurrentUser(user);
                 return doesExist;
             }
         }
         return doesExist;
     }
 
-    private static void setCurrentUser(User tempUser){
+    private static void setCurrentUser(User tempUser){              // Clones existing user if applicable.
        currentUser = new User(tempUser.getfName(), tempUser.getlName(), tempUser.getSsn(), tempUser.getBday(), tempUser.getGender(),
                 tempUser.getUsername(), tempUser.getPassword(), tempUser.getEmail(), tempUser.getPhoneNum(), tempUser.getProfilePic());
     }

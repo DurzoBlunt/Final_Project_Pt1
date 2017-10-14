@@ -74,8 +74,11 @@ public class Controller {
     @FXML
     Button loginBTN;
     @FXML
+    Label loginUsernameError;
+    @FXML
+    Label loginPasswordError;
+    @FXML
     ImageView loginPic;
-
 
 
 
