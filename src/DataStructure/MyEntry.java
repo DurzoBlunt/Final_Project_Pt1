@@ -1,8 +1,9 @@
 package DataStructure;
 
+import java.io.Serializable;
 import java.security.Key;
 
-public class MyEntry<K, V> {
+public class MyEntry<K, V> implements Serializable {
     private final K key;
     private V value;
 
@@ -26,4 +27,7 @@ public class MyEntry<K, V> {
     public String toString(){
         return "Key = " + this.key + ", Value = " + this.value + " ";
     }
+
+
+
 }

@@ -1,10 +1,12 @@
 package DataStructure;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.SortedSet;
 
-public class MyMaps<K, V> {
+public class MyMaps<K, V> implements Serializable {
 
     private int size;
     private int capacity =  10;
@@ -116,7 +118,6 @@ public class MyMaps<K, V> {
     public String toString(){
         String string = "";
         for (int i = 0; i < size; i++){
-                //string.concat(values[i].toString())
                  string += values[i].toString();
 
         }
