@@ -29,7 +29,9 @@ public class AccountDB {
 //    }
     public static void populateList() throws Exception{
         try{
-            setAccountList((MyMaps<String, User>) AccountIO.readUsers());
+            if (AccountIO.readUsers() instanceof MyMaps) {
+                setAccountList((MyMaps<String, User>) AccountIO.readUsers());
+            }
         } catch (IOException e) {
             System.err.println("Fail to open/read users.dat file");
         } catch (ClassNotFoundException e) {
@@ -40,7 +42,7 @@ public class AccountDB {
 //    public static void setAccountList(ArrayList<User> accountList) {
 //        AccountDB.accountList = accountList;
 //    }
-    public static void setAccountList(MyMaps<String, User> accountList) {
+    private static void setAccountList(MyMaps<String, User> accountList) {
         AccountDB.accountList = accountList;
     }
 
@@ -82,10 +84,9 @@ public class AccountDB {
 //    }
     public static boolean checkAccountExistence(String other){
         boolean doesExist = false;
-        if (accountList.containsKey(other) == true){
+        if (accountList.containsKey(other)){
             doesExist = true;
             setCurrentUser(other);
-            return doesExist;
         }
         return doesExist;
     }
@@ -122,10 +123,8 @@ public class AccountDB {
         for (String key: accountList.keySet()) {
             if (accountList.get(key).getEmail().equalsIgnoreCase(other)){
                 hasDuplicate = true;
-                return hasDuplicate;
             }
         }
-
         return hasDuplicate;
     }
 }
