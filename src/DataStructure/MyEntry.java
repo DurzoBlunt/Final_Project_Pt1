@@ -11,15 +11,17 @@ public class MyEntry<K, V> implements Serializable {
         this.key = key;
         this.value = value;
     }
-
+    //Returns key
     public K getKey(){
         return key;
     }
 
+    //returns value
     public V getValue(){
         return value;
     }
 
+    //set the value
     public void setValue(V value){
         this.value = value;
     }

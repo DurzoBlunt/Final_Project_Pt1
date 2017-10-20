@@ -12,7 +12,7 @@ public class MyMaps<K, V> implements Serializable {
     private int capacity =  10;
     private MyEntry<K, V>[] values = new MyEntry[capacity];
 
-
+    //gets the Value of the given Key
     public V get(K key) throws NullPointerException{
         for (int i = 0; i < size; i++) {
             if (values[i] != null){
@@ -27,10 +27,12 @@ public class MyMaps<K, V> implements Serializable {
         return null;
     }
 
+    //gets the quantity of elements in the Map
     public int getSize(){
         return size;
     }
 
+    //checks and changes capacity of the map
     public void checkCap(){
         if (size == values.length + 1){
             int newSize = values.length + 10;
@@ -38,6 +40,7 @@ public class MyMaps<K, V> implements Serializable {
         }
     }
 
+    //adds the Entry to the map, if it exists, it edits the value;
     public void put(K key, V value){
         boolean insert = true;
         for (int i = 0; i < size; i++){
@@ -52,6 +55,7 @@ public class MyMaps<K, V> implements Serializable {
         }
     }
 
+    //Shrinks the array after deleting an element
     public void shrinkArray(int startPos) throws RemoveEmptyArrayException{
         if(getSize() == 0){
             throw (new RemoveEmptyArrayException("Array is null or empty"));
@@ -61,6 +65,7 @@ public class MyMaps<K, V> implements Serializable {
         }
     }
 
+    //Calls shrinkArray, removes element from the map.
     public void remove(K key) throws RemoveEmptyArrayException{
 
         for (int i = 0; i < size; i++){
@@ -72,6 +77,7 @@ public class MyMaps<K, V> implements Serializable {
         }
     }
 
+    //Provides a set of Keys
     public Set<K> keySet(){
         Set<K> set = new HashSet<K>();
         for(int i = 0; i < size; i++){
@@ -80,6 +86,7 @@ public class MyMaps<K, V> implements Serializable {
         return set;
     }
 
+    //Checks if map is empty
     public boolean isEmpty(){
         boolean isEmpty = true;
         if (0 < size){
@@ -88,6 +95,7 @@ public class MyMaps<K, V> implements Serializable {
        return isEmpty;
     }
 
+    //returns the index of an element
     public int indexOf(K key){
         int i;
         for (i = 0; i < size; i++) {
@@ -100,6 +108,7 @@ public class MyMaps<K, V> implements Serializable {
         return i;
     }
 
+    //Boolean checks the map for a Key
     public boolean containsKey(K key){
         boolean containsKey = false;
         for (int i = 0; i < size; i++){
@@ -111,6 +120,7 @@ public class MyMaps<K, V> implements Serializable {
         return containsKey;
     }
 
+    //boolean checks the map for a Value
     public boolean containsValue(V value){
         boolean containsValue = false;
         for (int i = 0; i < size; i++){
@@ -132,6 +142,7 @@ public class MyMaps<K, V> implements Serializable {
         return string;
     }
 
+    //Resets the map
     public void reset(){
         values = new MyEntry[capacity];
     }
