@@ -13,12 +13,15 @@ public class MyMaps<K, V> implements Serializable {
     private MyEntry<K, V>[] values = new MyEntry[capacity];
 
 
-    public V get(K key){
+    public V get(K key) throws NullPointerException{
         for (int i = 0; i < size; i++) {
             if (values[i] != null){
                 if (values[i].getKey().equals(key)){
                     return values[i].getValue();
                 }
+            }
+            else{
+                throw (new NullPointerException("The value is null!"));
             }
         }
         return null;
@@ -49,13 +52,17 @@ public class MyMaps<K, V> implements Serializable {
         }
     }
 
-    public void shrinkArray(int startPos){
+    public void shrinkArray(int startPos) throws RemoveEmptyArrayException{
+        if(getSize() == 0){
+            throw (new RemoveEmptyArrayException("Array is null or empty"));
+        }
         for (int i = startPos; i < size; i++){
             values[i] = values[i + 1];
         }
     }
 
-    public void remove(K key){
+    public void remove(K key) throws RemoveEmptyArrayException{
+
         for (int i = 0; i < size; i++){
             if (values[i].getKey().equals(key)){
                 values[i] = null;
