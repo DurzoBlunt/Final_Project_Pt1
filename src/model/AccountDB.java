@@ -55,8 +55,11 @@ public class AccountDB {
 
     private static void setCurrentUser(String username){// Clones existing user if applicable.
         User tempUser = accountList.get(username);
-        currentUser = new User(tempUser.getfName(), tempUser.getlName(), tempUser.getSsn(), tempUser.getBday(), tempUser.getGender(),
-                tempUser.getUsername(), tempUser.getPassword(), tempUser.getEmail(), tempUser.getPhoneNum(), tempUser.getProfilePic());
+//        currentUser = new User(tempUser.getfName(), tempUser.getlName(), tempUser.getSsn(), tempUser.getBday(), tempUser.getGender(),
+//                tempUser.getUsername(), tempUser.getPassword(), tempUser.getEmail(), tempUser.getPhoneNum(), tempUser.getProfilePic());
+        currentUser = new User(tempUser.getfName(), tempUser.getlName(), tempUser.getGender(), tempUser.getCity(), tempUser.getState(),
+                tempUser.getSsn(), tempUser.getZip(), tempUser.getLocation(), tempUser.getBday(), tempUser.getPhoneNum(),tempUser.getAddress(),
+                tempUser.getUsername(), tempUser.getEmail(), tempUser.getPassword(), tempUser.getProfilePic());
     }
 
     public static User getCurrentUser(){

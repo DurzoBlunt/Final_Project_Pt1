@@ -7,28 +7,23 @@ import java.time.LocalDate;
 public class User extends Person implements Serializable{
 
     private String username, email, password;
-    private Long phoneNum;
     private URL profilePic;
-    public User(){
 
-    }
-
-    public User(String username, String password, String email, Long phoneNum, URL profilePic) {
+    public User(){}
+    public User(String username, String email, String password, URL profilePic) {
         this.username = username;
-        this.password = password;
         this.email = email;
-        this.phoneNum = phoneNum;
+        this.password = password;
         this.profilePic = profilePic;
     }
 
-    public User(String fName, String lName, int ssn, LocalDate bday, String gender,
-                String username, String password, String email, Long phoneNum, URL profilePic) {
-
-        super(fName, lName, ssn, bday, gender);
+    public User(String fName, String lName, String gender, String city, String state, int ssn, int zip, int location,
+                LocalDate bday, long phoneNum, String address, String username, String email, String password,
+                URL profilePic) {
+        super(fName, lName, gender, city, state, ssn, zip, location, bday, phoneNum, address);
         this.username = username;
-        this.password = password;
         this.email = email;
-        this.phoneNum = phoneNum;
+        this.password = password;
         this.profilePic = profilePic;
     }
 
@@ -62,16 +57,6 @@ public class User extends Person implements Serializable{
         this.password = password;
     }
 
-    public Long getPhoneNum() {
-
-        return phoneNum;
-    }
-
-    public void setPhoneNum(Long phoneNum) {
-
-        this.phoneNum = phoneNum;
-    }
-
     public URL getProfilePic() {
         return profilePic;
     }
@@ -82,7 +67,7 @@ public class User extends Person implements Serializable{
 
     public String toString(){
         return super.getfName() +"\n" + super.getlName() + "\n" + super.getSsn() + "\n" + super.getBday() + "\n" + super.getGender() + "\n" +
-                getUsername() + "\n" + getPassword() + "\n" + getEmail() + "\n" + getPhoneNum();
+                getUsername() + "\n" + getPassword() + "\n" + getEmail() + "\n";
     }
 
 }

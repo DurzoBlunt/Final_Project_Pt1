@@ -10,95 +10,123 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="createAccountPage" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane fx:id="createAccountPage" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label layoutX="70.0" layoutY="119.0" prefHeight="27.0" prefWidth="87.0" text="Username">
+      <Label layoutX="74.0" layoutY="51.0" prefHeight="27.0" prefWidth="87.0" text="Username">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="381.0" layoutY="119.0" prefHeight="27.0" prefWidth="95.0" text="First Name">
+      <Label layoutX="386.0" layoutY="51.0" prefHeight="27.0" prefWidth="95.0" text="First Name">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="381.0" layoutY="189.0" prefHeight="27.0" prefWidth="95.0" text="Last Name">
+      <Label layoutX="382.0" layoutY="119.0" prefHeight="27.0" prefWidth="95.0" text="Last Name">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="379.0" layoutY="332.0" prefHeight="27.0" prefWidth="37.0" text="SSN">
+      <Label layoutX="382.0" layoutY="260.0" prefHeight="27.0" prefWidth="37.0" text="SSN">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="402.0" prefHeight="27.0" prefWidth="125.0" text="Phone Number">
+      <Label layoutX="71.0" layoutY="334.0" prefHeight="27.0" prefWidth="125.0" text="Phone Number">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="189.0" prefHeight="25.0" prefWidth="87.0" text="Password">
+      <Label layoutX="74.0" layoutY="119.0" prefHeight="25.0" prefWidth="87.0" text="Password">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <PasswordField fx:id="inputPassword" layoutX="70.0" layoutY="216.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter Password" />
-      <PasswordField fx:id="inputConfirmPassword" layoutX="69.0" layoutY="290.0" prefHeight="25.0" prefWidth="151.0" promptText="Confirm Password" />
-      <Label layoutX="69.0" layoutY="260.0" prefHeight="27.0" prefWidth="151.0" text="Confirm Password">
+      <PasswordField fx:id="inputPassword" layoutX="70.0" layoutY="146.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter Password" />
+      <PasswordField fx:id="inputConfirmPassword" layoutX="70.0" layoutY="216.0" prefHeight="25.0" prefWidth="151.0" promptText="Confirm Password" />
+      <Label layoutX="74.0" layoutY="189.0" prefHeight="27.0" prefWidth="151.0" text="Confirm Password">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <CheckBox fx:id="pickGenderMale" layoutX="386.0" layoutY="433.0" mnemonicParsing="false" text="Male" />
-      <CheckBox fx:id="pickGenderFemale" layoutX="451.0" layoutY="433.0" mnemonicParsing="false" text="Female" />
-      <Label layoutX="377.0" layoutY="402.0" prefHeight="27.0" prefWidth="65.0" text="Gender">
+      <CheckBox fx:id="pickGenderMale" layoutX="386.0" layoutY="366.0" mnemonicParsing="false" text="Male" />
+      <CheckBox fx:id="pickGenderFemale" layoutX="452.0" layoutY="366.0" mnemonicParsing="false" text="Female" />
+      <Label layoutX="377.0" layoutY="334.0" prefHeight="27.0" prefWidth="65.0" text="Gender">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnCreateAcount" layoutX="205.0" layoutY="631.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="37.0" prefWidth="276.0" text="Create Account" />
-      <Label layoutX="70.0" layoutY="332.0" prefHeight="27.0" prefWidth="47.0" text="Email">
+      <Button fx:id="btnCreateAcount" layoutX="205.0" layoutY="722.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="37.0" prefWidth="276.0" text="Create Account" />
+      <Label layoutX="74.0" layoutY="259.0" prefHeight="27.0" prefWidth="47.0" text="Email">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="inputUsername" layoutX="70.0" layoutY="146.0" promptText="Enter Username" />
-      <TextField fx:id="inputEmail" layoutX="70.0" layoutY="357.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
-      <TextField fx:id="inputFirstName" layoutX="377.0" layoutY="146.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
-      <TextField fx:id="inputLastName" layoutX="376.0" layoutY="216.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
+      <TextField fx:id="inputUsername" layoutX="71.0" layoutY="78.0" promptText="Enter Username" />
+      <TextField fx:id="inputEmail" layoutX="69.0" layoutY="290.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Email" />
+      <TextField fx:id="inputFirstName" layoutX="377.0" layoutY="78.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter First Name" />
+      <TextField fx:id="inputLastName" layoutX="377.0" layoutY="146.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Last Name" />
       <Label layoutX="350.0" layoutY="260.0" prefHeight="27.0" prefWidth="37.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="378.0" layoutY="260.0" prefHeight="27.0" prefWidth="102.0" text="Date of Birth">
+      <Label layoutX="379.0" layoutY="189.0" prefHeight="27.0" prefWidth="102.0" text="Date of Birth">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <DatePicker fx:id="inputBirthDate" layoutX="374.0" layoutY="290.0" />
-      <TextField fx:id="inputSSN" layoutX="377.0" layoutY="357.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
-      <TextField fx:id="inputPhoneNumber" layoutX="69.0" layoutY="429.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
-      <Label fx:id="usernameError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="146.0" prefHeight="43.0" prefWidth="136.0" textFill="RED" />
-      <Label fx:id="passwordError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="219.0" layoutY="216.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="confirmPasswordError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="287.0" prefHeight="50.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="emailError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="357.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="phoneNumberError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="219.0" layoutY="429.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="firstNameError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="528.0" layoutY="146.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="lastNameError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="528.0" layoutY="216.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="SSNError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="528.0" layoutY="357.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="accountCreated" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="205.0" layoutY="668.0" prefHeight="43.0" prefWidth="276.0" textAlignment="CENTER" textFill="#2c17eb">
+      <DatePicker fx:id="inputBirthDate" layoutX="377.0" layoutY="216.0" />
+      <TextField fx:id="inputSSN" layoutX="376.0" layoutY="290.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter SSN" />
+      <TextField fx:id="inputPhoneNumber" layoutX="69.0" layoutY="362.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Phone Number" />
+      <Label fx:id="usernameError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="69.0" prefHeight="43.0" prefWidth="136.0" textFill="RED" />
+      <Label fx:id="passwordError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="137.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="confirmPasswordError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="204.0" prefHeight="50.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="emailError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="225.0" layoutY="281.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="phoneNumberError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="353.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="firstNameError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="528.0" layoutY="137.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="lastNameError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="528.0" layoutY="69.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="SSNError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="528.0" layoutY="281.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="accountCreated" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="205.0" layoutY="759.0" prefHeight="43.0" prefWidth="276.0" textAlignment="CENTER" textFill="#2c17eb">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="btnChoosePic" layoutX="241.0" layoutY="538.0" mnemonicParsing="false" onAction="#btnChoosePicAction" text="Choose Picture" />
-      <TextField fx:id="filePathViewer" layoutX="340.0" layoutY="538.0" prefHeight="25.0" prefWidth="205.0" />
-      <ImageView fx:id="picture" fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true" />
-      <Label alignment="CENTER" layoutX="241.0" layoutY="563.0" prefHeight="27.0" prefWidth="303.0" text="If a picture is not chosen one will be assigned!!">
+      <Button fx:id="btnChoosePic" layoutX="241.0" layoutY="640.0" mnemonicParsing="false" onAction="#btnChoosePicAction" text="Choose Picture" />
+      <TextField fx:id="filePathViewer" layoutX="340.0" layoutY="640.0" prefHeight="25.0" prefWidth="205.0" />
+      <ImageView fx:id="picture" fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" layoutX="235.0" layoutY="669.0" prefHeight="27.0" prefWidth="303.0" text="If a picture is not chosen one will be assigned!!">
          <font>
             <Font name="System Italic" size="12.0" />
          </font>
       </Label>
+      <TextField fx:id="inputAddress" layoutX="69.0" layoutY="433.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Address" />
+      <Label layoutX="71.0" layoutY="404.0" prefHeight="27.0" prefWidth="125.0" text="Address">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputCity" layoutX="376.0" layoutY="433.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter City" />
+      <TextField fx:id="inputState" layoutX="70.0" layoutY="506.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter State" />
+      <TextField fx:id="inputZip" layoutX="377.0" layoutY="506.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter State" />
+      <Label fx:id="addressError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="424.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label layoutX="71.0" layoutY="479.0" prefHeight="27.0" prefWidth="125.0" text="State">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="380.0" layoutY="404.0" prefHeight="27.0" prefWidth="125.0" text="City">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="380.0" layoutY="479.0" prefHeight="27.0" prefWidth="125.0" text="Zip Code">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="stateError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="497.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="cityError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="528.0" layoutY="424.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="zipError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="528.0" layoutY="497.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
    </children>
 </Pane>

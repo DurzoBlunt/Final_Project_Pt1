@@ -79,6 +79,23 @@ public class Controller {
     Label loginPasswordError;
     @FXML
     ImageView loginPic;
+    @FXML
+    TextField inputAddress;
+    @FXML
+    TextField inputState;
+    @FXML
+    TextField inputCity;
+    @FXML
+    TextField inputZip;
+    @FXML
+    Label addressError;
+    @FXML
+    Label cityError;
+    @FXML
+    Label stateError;
+    @FXML
+    Label zipError;
+
 
 
 
@@ -90,9 +107,13 @@ public class Controller {
     public void createAccount(){
         if(authenticate()) {
             accountCreated.setText("SUCCESSFUL!!");
-            User newUser = new User(inputFirstName.getText(), inputLastName.getText(), Integer.parseInt(inputSSN.getText()), inputBirthDate.getValue(),
-                        genderPicker(), inputUsername.getText(), inputPassword.getText(), inputEmail.getText(),
-                        Long.parseLong(inputPhoneNumber.getText()), picUrl);
+//            User newUser = new User(inputFirstName.getText(), inputLastName.getText(), Integer.parseInt(inputSSN.getText()), inputBirthDate.getValue(),
+//                    genderPicker(), inputUsername.getText(), inputPassword.getText(), inputEmail.getText(),
+//                    Long.parseLong(inputPhoneNumber.getText()), picUrl);
+            User newUser = new User(inputFirstName.getText(), inputLastName.getText(), genderPicker(), inputCity.getText(), inputState.getText(),
+                    Integer.parseInt(inputSSN.getText()), Integer.parseInt (inputZip.getText()), GET_LOCATION, inputBirthDate.getValue(),
+                    Long.parseLong(inputPhoneNumber.getText()), Integer.parseInt (inputZip.getText()),
+                    inputUsername.getText(), inputEmail.getText(), inputPassword.getText(), picUrl);
 
                 AccountDB.addAccount(newUser); // Adds account to DB, then writes to file
                 System.out.println(AccountDB.getAccountList());
