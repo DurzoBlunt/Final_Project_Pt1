@@ -74,7 +74,12 @@ public class Controller {
     @FXML
     Button loginBTN;
     @FXML
+    Label loginUsernameError;
+    @FXML
+    Label loginPasswordError;
+    @FXML
     ImageView loginPic;
+    @FXML
 
 
 
@@ -87,22 +92,22 @@ public class Controller {
     public void createAccount(){
         if(authenticate()) {
             accountCreated.setText("SUCCESSFUL!!");
-            User newUser = new User(inputFirstName.getText(), inputLastName.getText(), Integer.parseInt(inputSSN.getText()), inputBirthDate.getValue(),
-                        genderPicker(), inputUsername.getText(), inputPassword.getText(), inputEmail.getText(),
-                        Long.parseLong(inputPhoneNumber.getText()), picUrl);
+            User newUser = new User(inputFirstName.getText(), inputLastName.getText(), Integer.parseInt(inputSSN.getText()),
+                    inputBirthDate.getValue(), genderPicker(), inputUsername.getText(), inputPassword.getText(),
+                    inputEmail.getText(), Long.parseLong(inputPhoneNumber.getText()), picUrl);
 
-                AccountDB.addAccount(newUser); // Adds account to DB, then writes to file
-                System.out.println(AccountDB.getAccountList());
-            }
-   }
+            AccountDB.addAccount(newUser); // Adds account to DB, then writes to file
+            System.out.println(AccountDB.getAccountList());
+        }
+    }
 
     public void displayCreateAccountPage(ActionEvent actionEvent) throws Exception{
         Stage primaryStage = (Stage) ((Hyperlink)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("CreateAccount.fxml"));
         primaryStage.setTitle("There is no title yet");
-       primaryStage.setScene(new Scene(root, 685, 732));
-       primaryStage.show();
-   }
+        primaryStage.setScene(new Scene(root, 685, 732));
+        primaryStage.show();
+    }
 
     public void loginAuthenticator() {
         if(AccountDB.checkAccountExistence(loginUsername.getText())){
@@ -135,14 +140,14 @@ public class Controller {
             passwordError.setText("");
             //Check matching PW
             success = true;
-             if(!inputPassword.getText().equals(inputConfirmPassword.getText())){
+            if(!inputPassword.getText().equals(inputConfirmPassword.getText())){
 
                 confirmPasswordError.setText("Passwords do not match");
-                 success = false;
-             }
-             else{
-                 confirmPasswordError.setText("");
-             }
+                success = false;
+            }
+            else{
+                confirmPasswordError.setText("");
+            }
         }
         else{
             success = false;
