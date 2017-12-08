@@ -7,13 +7,13 @@ import java.io.IOException;
 public class AccountDB {
     //creates user for the current user
     public static User currentUser = new User();
-
+    // Creates new hash map called accountList
     private static MyHashMap<String, User> accountList = new MyHashMap<>();
-
+    // returns the has map
     public static MyHashMap<String, User> getAccountList() {
         return accountList;
     }
-
+    // read users from useres.dat file and populate the hash map
     public static void populateList() throws Exception{
         try{
             if (AccountIO.readUsers() instanceof MyHashMap) {
@@ -21,6 +21,7 @@ public class AccountDB {
             }
         } catch (IOException e) {
             System.err.println("Fail to open/read users.dat file");
+            e.printStackTrace();
         } catch (ClassNotFoundException e) {
             System.err.println("Failed to read and cast the AccountDB due to user class issues.");
         }
@@ -43,11 +44,11 @@ public class AccountDB {
         }
     }
 
-    public static boolean checkAccountExistence(String other){
+    public static boolean checkAccountExistence(String key){
         boolean doesExist = false;
-        if (accountList.containsKey(other)){
+        if (accountList.containsKey(key)){
             doesExist = true;
-            setCurrentUser(other);
+            setCurrentUser(key);
         }
         return doesExist;
     }

@@ -1,11 +1,14 @@
 package DataStructure;
 
+import java.io.Serializable;
+
 public interface MyMap<K, V> {
     /** Remove all of the entries from this map */
     public void clear();
 
     /** Return true if the specified key is in the map */
     public boolean containsKey(K key);
+
 
     /** Return true if this map contains the specified value */
     public boolean containsValue(V value);
@@ -35,7 +38,7 @@ public interface MyMap<K, V> {
     public java.util.Set<V> values();
 
     /** Define an inner class for Entry */
-    public class Entry<K, V> {
+    public class Entry<K, V> implements Serializable{
         K key;
         V value;
 

@@ -31,6 +31,21 @@ public class Person implements Serializable {
         this.phoneNum = phoneNum;
     }
 
+    public Person(String fName, String lName, String gender, String address, String city, String state, int zip,
+                  double lat, double lon, LocalDate bday, long phoneNum) {
+        this.fName = fName;
+        this.lName = lName;
+        this.gender = gender;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.lat = lat;
+        this.lon = lon;
+        this.bday = bday;
+        this.phoneNum = phoneNum;
+        this.address = address;
+    }
+
     public Person(String fName, String lName, String gender, String city, String state, int ssn, int zip,
                        double lat, double lon, LocalDate bday, long phoneNum, String address) {
         this.fName = fName;

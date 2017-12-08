@@ -89,7 +89,7 @@ public class Controller {
     URL picUrl = getClass().getResource("NullPhoto.jpg");
 
 
-    public void createAccount(){
+    public void createAccount(ActionEvent actionEvent){
         if(authenticate()) {
             accountCreated.setText("SUCCESSFUL!!");
             User newUser = new User(inputFirstName.getText(), inputLastName.getText(), Integer.parseInt(inputSSN.getText()),
@@ -98,6 +98,12 @@ public class Controller {
 
             AccountDB.addAccount(newUser); // Adds account to DB, then writes to file
             System.out.println(AccountDB.getAccountList());
+            try {
+                displayLoginPage(actionEvent);
+            } catch (Exception e) {
+                System.err.println("Login scene proccess failed.");
+                e.printStackTrace();
+            }
         }
     }
 
@@ -106,6 +112,15 @@ public class Controller {
         Parent root = FXMLLoader.load(getClass().getResource("CreateAccount.fxml"));
         primaryStage.setTitle("There is no title yet");
         primaryStage.setScene(new Scene(root, 685, 732));
+        primaryStage.show();
+    }
+
+    public void displayLoginPage(ActionEvent actionEvent) throws Exception{
+        Stage primaryStage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+        AccountDB.populateList();
+        Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        primaryStage.setTitle("Stranger Ranger");
+        primaryStage.setScene(new Scene(root, 470, 474));
         primaryStage.show();
     }
 

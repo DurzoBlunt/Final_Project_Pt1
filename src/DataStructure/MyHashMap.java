@@ -1,8 +1,9 @@
 package DataStructure;
 
 import java.util.LinkedList;
+import java.io.Serializable;
 
-public class MyHashMap<K, V> implements MyMap<K, V> {
+public class MyHashMap<K, V> implements MyMap<K, V>, Serializable{
     // Define the default hash-table size. Must be a power of 2
     private static int DEFAULT_INITIAL_CAPACITY = 4;
 

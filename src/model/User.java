@@ -16,16 +16,22 @@ public class User extends Person implements Serializable{
         this.password = password;
         this.profilePic = profilePic;
     }
-
+    // Create account constructor
     public User (String fName, String lName, int ssn, LocalDate bday, String gender, String username,
                  String pw, String email, long phone, URL pic){
-
+        super(fName, lName, gender, ssn, bday, phone);
+        this.username = username;
+        this.email = email;
+        this.password = pw;
+        this.profilePic = pic;
     }
-
-    public User (String fName, String lName, String state, int ssn, int zip, double lat, double lon){
-
+    // Used for excel  sheet
+    public User (String fName, String lName, String gender, String address, String city, String state, int zip,
+                 double lat, double lon, LocalDate bday, long phone, String email){
+        super(fName, lName, gender, address, city, state, zip, lat, lon, bday, phone);
+        this.email = email;
     }
-
+    // Contains all variables
     public User(String fName, String lName, String gender, String city, String state, int ssn, int zip, double lat, double lon,
                 LocalDate bday, long phoneNum, String address, String username, String email, String password,
                 URL profilePic) {
@@ -72,7 +78,7 @@ public class User extends Person implements Serializable{
     }
 
     public void setProfilePic(URL url) {
-        this.profilePic = profilePic;
+        this.profilePic = url;
     }
 
     public String toString(){

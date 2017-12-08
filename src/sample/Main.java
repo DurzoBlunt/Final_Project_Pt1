@@ -18,8 +18,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         AccountDB.populateList();
         Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 470, 315));
+        primaryStage.setTitle("Stranger Ranger");
+        primaryStage.setScene(new Scene(root, 470, 474));
         primaryStage.show();
     }
 

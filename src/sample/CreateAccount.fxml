@@ -12,6 +12,25 @@
 
 <Pane fx:id="createAccountPage" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
+      <TextField fx:id="inputUsername" layoutX="70.0" layoutY="146.0" promptText="Enter Username" />
+      <PasswordField fx:id="inputPassword" layoutX="70.0" layoutY="216.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter Password" />
+      <PasswordField fx:id="inputConfirmPassword" layoutX="69.0" layoutY="290.0" prefHeight="25.0" prefWidth="151.0" promptText="Confirm Password" />
+      <TextField fx:id="inputEmail" layoutX="70.0" layoutY="357.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
+      <TextField fx:id="inputPhoneNumber" layoutX="69.0" layoutY="429.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
+      <TextField fx:id="inputFirstName" layoutX="377.0" layoutY="146.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
+      <TextField fx:id="inputLastName" layoutX="376.0" layoutY="216.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
+      <DatePicker fx:id="inputBirthDate" layoutX="374.0" layoutY="290.0" />
+      <TextField fx:id="inputSSN" layoutX="377.0" layoutY="357.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
+      <CheckBox fx:id="pickGenderMale" layoutX="386.0" layoutY="433.0" mnemonicParsing="false" text="Male" />
+      <CheckBox fx:id="pickGenderFemale" layoutX="451.0" layoutY="433.0" mnemonicParsing="false" text="Female" />
+      <Button fx:id="btnChoosePic" layoutX="241.0" layoutY="538.0" mnemonicParsing="false" onAction="#btnChoosePicAction" text="Choose Picture" />
+      <TextField fx:id="filePathViewer" layoutX="340.0" layoutY="538.0" prefHeight="25.0" prefWidth="205.0" />
+      <Button fx:id="btnCreateAcount" layoutX="205.0" layoutY="631.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="37.0" prefWidth="276.0" text="Create Account" />
+      <Label layoutX="69.0" layoutY="260.0" prefHeight="27.0" prefWidth="151.0" text="Confirm Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
       <Label layoutX="70.0" layoutY="119.0" prefHeight="27.0" prefWidth="87.0" text="Username">
          <font>
             <Font size="18.0" />
@@ -42,30 +61,16 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <PasswordField fx:id="inputPassword" layoutX="70.0" layoutY="216.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter Password" />
-      <PasswordField fx:id="inputConfirmPassword" layoutX="69.0" layoutY="290.0" prefHeight="25.0" prefWidth="151.0" promptText="Confirm Password" />
-      <Label layoutX="69.0" layoutY="260.0" prefHeight="27.0" prefWidth="151.0" text="Confirm Password">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <CheckBox fx:id="pickGenderMale" layoutX="386.0" layoutY="433.0" mnemonicParsing="false" text="Male" />
-      <CheckBox fx:id="pickGenderFemale" layoutX="451.0" layoutY="433.0" mnemonicParsing="false" text="Female" />
       <Label layoutX="377.0" layoutY="402.0" prefHeight="27.0" prefWidth="65.0" text="Gender">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnCreateAcount" layoutX="205.0" layoutY="631.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="37.0" prefWidth="276.0" text="Create Account" />
       <Label layoutX="70.0" layoutY="332.0" prefHeight="27.0" prefWidth="47.0" text="Email">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="inputUsername" layoutX="70.0" layoutY="146.0" promptText="Enter Username" />
-      <TextField fx:id="inputEmail" layoutX="70.0" layoutY="357.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
-      <TextField fx:id="inputFirstName" layoutX="377.0" layoutY="146.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
-      <TextField fx:id="inputLastName" layoutX="376.0" layoutY="216.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
       <Label layoutX="350.0" layoutY="260.0" prefHeight="27.0" prefWidth="37.0">
          <font>
             <Font size="18.0" />
@@ -76,9 +81,6 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <DatePicker fx:id="inputBirthDate" layoutX="374.0" layoutY="290.0" />
-      <TextField fx:id="inputSSN" layoutX="377.0" layoutY="357.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
-      <TextField fx:id="inputPhoneNumber" layoutX="69.0" layoutY="429.0" prefHeight="25.0" prefWidth="151.0" promptText="Enter Username" />
       <Label fx:id="usernameError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="146.0" prefHeight="43.0" prefWidth="136.0" textFill="RED" />
       <Label fx:id="passwordError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="219.0" layoutY="216.0" prefHeight="43.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
       <Label fx:id="confirmPasswordError" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="221.0" layoutY="287.0" prefHeight="50.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
@@ -92,8 +94,6 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="btnChoosePic" layoutX="241.0" layoutY="538.0" mnemonicParsing="false" onAction="#btnChoosePicAction" text="Choose Picture" />
-      <TextField fx:id="filePathViewer" layoutX="340.0" layoutY="538.0" prefHeight="25.0" prefWidth="205.0" />
       <ImageView fx:id="picture" fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true" />
       <Label alignment="CENTER" layoutX="241.0" layoutY="563.0" prefHeight="27.0" prefWidth="303.0" text="If a picture is not chosen one will be assigned!!">
          <font>
